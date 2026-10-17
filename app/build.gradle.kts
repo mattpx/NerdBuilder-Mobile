@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.nerdbuilder.mobile"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.nerdbuilder.mobile"
         minSdk = 28
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "0.1.0"
     }
@@ -28,7 +28,9 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
     buildFeatures { compose = true }
+    composeOptions { kotlinCompilerExtensionVersion = "1.5.14" }
 
+    ndk { abiFilters += listOf("arm64-v8a") }
     externalNativeBuild {
         cmake { path = file("src/main/cpp/CMakeLists.txt") }
     }
