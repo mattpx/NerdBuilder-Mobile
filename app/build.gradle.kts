@@ -42,4 +42,5 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.2.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.json:json:20231013")
+    implementation("org.apache.commons:commons-compress:1.26.0")
 }

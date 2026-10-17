@@ -1,9 +1,7 @@
 package com.nerdproject.runtime
 
 import android.content.Context
-import com.nerdproject.R
 import com.nerdproject.model.ChangeItem
-import com.nerdproject.ui.AppStrings
 import com.nerdproject.model.DiffLine
 import com.nerdproject.model.DiffLineType
 import java.io.File
@@ -24,8 +22,7 @@ class WorkspaceCheckpoints(
     /** Optional: when present, informational diff rows use the language picked in the app. */
     private val context: Context? = null,
 ) {
-    private fun text(@androidx.annotation.StringRes id: Int, fallback: String, vararg args: Any): String =
-        context?.let { AppStrings.get(it, id, *args) } ?: fallback
+    private fun text(fallback: String): String = fallback
 
     private val projectRoots = ConcurrentHashMap<String, String>()
 
@@ -118,7 +115,7 @@ class WorkspaceCheckpoints(
                     diffLines = listOf(
                         DiffLine(
                             DiffLineType.INFO,
-                            text(R.string.rt_diff_file_too_large, "File is too large to preview safely. Undo and Keep still work."),
+                            text("File is too large to preview safely. Undo and Keep still work."),
                         ),
                     ),
                 )
@@ -139,7 +136,7 @@ class WorkspaceCheckpoints(
 
     fun buildDiffLines(beforeBytes: ByteArray, afterBytes: ByteArray): List<DiffLine> {
         if (beforeBytes.any { it == 0.toByte() } || afterBytes.any { it == 0.toByte() }) {
-            return listOf(DiffLine(DiffLineType.INFO, text(R.string.rt_diff_binary_changed, "Binary file changed")))
+            return listOf(DiffLine(DiffLineType.INFO, text("Binary file changed")))
         }
         val before = textLines(beforeBytes)
         val after = textLines(afterBytes)
@@ -147,12 +144,7 @@ class WorkspaceCheckpoints(
             return listOf(
                 DiffLine(
                     DiffLineType.INFO,
-                    text(
-                        R.string.rt_diff_too_large,
-                        "Diff is too large to display (${before.size} → ${after.size} lines). Undo and Keep still work.",
-                        before.size,
-                        after.size,
-                    ),
+                    text("Diff too large: ${before.size} to ${after.size} lines."),
                 ),
             )
         }
