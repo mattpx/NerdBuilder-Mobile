@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -14,6 +13,8 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "0.1.0"
+        ndkVersion = "26.3.11579264"
+        ndk { abiFilters += listOf("arm64-v8a") }
     }
 
     buildTypes {
@@ -30,7 +31,6 @@ android {
     buildFeatures { compose = true }
     composeOptions { kotlinCompilerExtensionVersion = "1.5.14" }
 
-    ndk { abiFilters += listOf("arm64-v8a") }
     externalNativeBuild {
         cmake { path = file("src/main/cpp/CMakeLists.txt") }
     }
