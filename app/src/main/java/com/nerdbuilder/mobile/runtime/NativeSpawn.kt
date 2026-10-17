@@ -1,4 +1,4 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
 object NativeSpawn {
     const val STILL_RUNNING = -2

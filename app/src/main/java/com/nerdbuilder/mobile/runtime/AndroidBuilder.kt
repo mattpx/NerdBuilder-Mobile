@@ -1,4 +1,4 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
 import android.content.Context
 import android.content.Intent

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22.1)
-project(nerdproject_native C)
+project(nerdbuilder_native C)
 
 add_library(nerdspawn SHARED nerd_spawn.c)
 

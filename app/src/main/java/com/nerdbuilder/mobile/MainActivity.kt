@@ -1,4 +1,4 @@
-package com.nerdproject
+package com.nerdbuilder.mobile
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,13 +7,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import com.nerdproject.data.ApiKeyVault
-import com.nerdproject.model.*
-import com.nerdproject.runtime.OpenClaudeBridge
-import com.nerdproject.runtime.RuntimeInstaller
-import com.nerdproject.ui.AgentScreen
-import com.nerdproject.ui.SettingsScreen
-import com.nerdproject.ui.TerminalScreen
+import com.nerdbuilder.mobile.data.ApiKeyVault
+import com.nerdbuilder.mobile.model.*
+import com.nerdbuilder.mobile.runtime.OpenClaudeBridge
+import com.nerdbuilder.mobile.runtime.RuntimeInstaller
+import com.nerdbuilder.mobile.ui.AgentScreen
+import com.nerdbuilder.mobile.ui.SettingsScreen
+import com.nerdbuilder.mobile.ui.TerminalScreen
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {

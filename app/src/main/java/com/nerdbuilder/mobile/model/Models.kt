@@ -1,4 +1,4 @@
-package com.nerdproject.model
+package com.nerdbuilder.mobile.model
 
 enum class ProviderProtocol { CLAUDE_LOGIN, ANTHROPIC, ANTHROPIC_GATEWAY, OPENROUTER, OPENAI_RESPONSES, OPENAI_CHAT }
 

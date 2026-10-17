@@ -1,4 +1,4 @@
-package com.nerdproject.ui
+package com.nerdbuilder.mobile.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -7,9 +7,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.nerdproject.model.ChatMessage
-import com.nerdproject.model.RuntimeEvent
-import com.nerdproject.model.ToolRequest
+import com.nerdbuilder.mobile.model.ChatMessage
+import com.nerdbuilder.mobile.model.RuntimeEvent
+import com.nerdbuilder.mobile.model.ToolRequest
 
 @Composable
 fun AgentScreen(

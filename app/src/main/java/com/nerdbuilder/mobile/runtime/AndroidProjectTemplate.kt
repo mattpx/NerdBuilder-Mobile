@@ -1,4 +1,4 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
 import java.io.File
 
@@ -6,7 +6,7 @@ object AndroidProjectTemplate {
     fun packageName(name: String): String {
         val raw = name.lowercase().replace(Regex("[^a-z0-9]+"), "_").trim('_').take(40).ifBlank { "app" }
         val suffix = if (raw.first().isLetter()) raw else "app_$raw"
-        return "com.nerdproject.$suffix"
+        return "com.nerdbuilder.mobile.$suffix"
     }
 
     fun generate(destination: File, appName: String) {

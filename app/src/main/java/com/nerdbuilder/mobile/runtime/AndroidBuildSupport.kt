@@ -1,4 +1,4 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
 import java.io.File
 import org.json.JSONObject

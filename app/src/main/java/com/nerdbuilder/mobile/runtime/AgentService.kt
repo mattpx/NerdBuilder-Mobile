@@ -1,4 +1,4 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -27,7 +27,7 @@ class AgentService : Service() {
             .build()
         startForeground(41, notif)
         wakeLock = (getSystemService(POWER_SERVICE) as PowerManager)
-            .newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "nerdproject:agent")
+            .newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "nerdbuilder:agent")
             .apply { acquire(90 * 60 * 1000L) }
         return START_NOT_STICKY
     }

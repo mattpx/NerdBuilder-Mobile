@@ -1,9 +1,9 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
 import android.content.Context
-import com.nerdproject.model.ChangeItem
-import com.nerdproject.model.DiffLine
-import com.nerdproject.model.DiffLineType
+import com.nerdbuilder.mobile.model.ChangeItem
+import com.nerdbuilder.mobile.model.DiffLine
+import com.nerdbuilder.mobile.model.DiffLineType
 import java.io.File
 import java.security.MessageDigest
 import java.util.concurrent.ConcurrentHashMap

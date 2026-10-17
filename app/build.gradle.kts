@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.nerdproject"
+    namespace = "com.nerdbuilder.mobile"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.nerdproject"
+        applicationId = "com.nerdbuilder.mobile"
         minSdk = 28
         targetSdk = 36
         versionCode = 1

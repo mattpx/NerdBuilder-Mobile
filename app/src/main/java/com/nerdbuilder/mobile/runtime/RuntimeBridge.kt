@@ -1,11 +1,11 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
-import com.nerdproject.model.ChatMessage
-import com.nerdproject.model.ChangeItem
-import com.nerdproject.model.ProviderProfile
-import com.nerdproject.model.ProjectKind
-import com.nerdproject.model.RuntimeEvent
-import com.nerdproject.model.ToolRequest
+import com.nerdbuilder.mobile.model.ChatMessage
+import com.nerdbuilder.mobile.model.ChangeItem
+import com.nerdbuilder.mobile.model.ProviderProfile
+import com.nerdbuilder.mobile.model.ProjectKind
+import com.nerdbuilder.mobile.model.RuntimeEvent
+import com.nerdbuilder.mobile.model.ToolRequest
 import kotlinx.coroutines.flow.Flow
 
 data class RuntimeLaunchConfig(

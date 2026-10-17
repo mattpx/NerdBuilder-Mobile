@@ -1,13 +1,13 @@
-package com.nerdproject.runtime
+package com.nerdbuilder.mobile.runtime
 
 import android.content.Context
 import android.util.Log
-import com.nerdproject.model.ChatMessage
-import com.nerdproject.model.ChangeItem
-import com.nerdproject.model.ProjectKind
-import com.nerdproject.model.ProviderProfile
-import com.nerdproject.model.RuntimeEvent
-import com.nerdproject.model.ToolRequest
+import com.nerdbuilder.mobile.model.ChatMessage
+import com.nerdbuilder.mobile.model.ChangeItem
+import com.nerdbuilder.mobile.model.ProjectKind
+import com.nerdbuilder.mobile.model.ProviderProfile
+import com.nerdbuilder.mobile.model.RuntimeEvent
+import com.nerdbuilder.mobile.model.ToolRequest
 import java.io.File
 import java.io.RandomAccessFile
 import java.util.UUID

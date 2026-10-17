@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "NerdProject"
+rootProject.name = "NerdBuilderMobile"
 include(":app")

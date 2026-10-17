@@ -1,4 +1,4 @@
-package com.nerdproject.data
+package com.nerdbuilder.mobile.data
 
 import android.content.Context
 import android.security.keystore.KeyGenParameterSpec
@@ -11,8 +11,8 @@ import javax.crypto.spec.GCMParameterSpec
 
 /** Android Keystore AES-256-GCM vault. One key per provider. */
 class ApiKeyVault(context: Context) {
-    private val prefs = context.getSharedPreferences("nerd_secrets", Context.MODE_PRIVATE)
-    private val alias = "nerd-provider-key"
+    private val prefs = context.getSharedPreferences("nerdbuilder_secrets", Context.MODE_PRIVATE)
+    private val alias = "nerdbuilder-provider-key"
 
     @Synchronized
     fun put(providerId: String, secret: String) {
