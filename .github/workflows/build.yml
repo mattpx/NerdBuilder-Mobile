@@ -28,7 +28,12 @@ jobs:
       - name: Install Android packages
         run: |
           echo "ANDROID_HOME=$ANDROID_HOME"
-          echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
+          if ! command -v sdkmanager >/dev/null 2>&1; then
+            SM=$(find "${ANDROID_HOME:-/usr/local/lib/android/sdk}" -maxdepth 4 -name sdkmanager -type f 2>/dev/null | head -1)
+            echo "found: $SM"
+            [ -n "$SM" ] && export PATH="$(dirname "$SM"):$PATH"
+          fi
+          command -v sdkmanager
           yes | sdkmanager --licenses || true
           sdkmanager "platforms;android-34" "build-tools;34.0.0" "cmake;3.22.1" "ndk;26.3.11579264"
 
